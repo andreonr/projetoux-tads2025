@@ -1,133 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamburgueria do Teko</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="imagens/logo.png" alt="Hamburgueria do Teko">
-                <h1>Hamburgueria do Teko</h1>
+    <header class="bg-danger text-white py-3">
+        <nav class="navbar navbar-expand-lg navbar-danger container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="imagens/logo.png" alt="Hamburgueria do Teko" class="me-2" height="30">
+                <h1 class="fs-4 mb-0">Hamburgueria do Teko</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cardapio">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pedido">Peça Já</a>
+                    </li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
-              <li><a href="pedido">Peça Já</a></li>
-            </ul>
         </nav>
-        <div class="hero">
-            <img src="imagens/banner.jpg" alt="Banner Hamburgueria">
-            <div class="hero-content">
-                <h1>Os Melhores Hambúrgueres da Cidade!</h1>
-                <p>Sabor e qualidade que você só encontra aqui.</p>
-                <a href="#cardapio" class="button">Ver Cardápio</a>
+        <div class="hero container-fluid p-0">
+            <img src="imagens/banner.jpg" alt="Banner Hamburgueria" class="img-fluid w-100">
+            <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
+                <h1 class="display-4">Os Melhores Lanches da Cidade!</h1>
+                <p class="lead">Qualidade e sabor você só encontra aqui.</p>
+                <a href="#cardapio" class="btn btn-primary btn-warning">Ver Cardápio</a>
             </div>
         </div>
     </header>
 
-    <section id="inicio" class="section">
-        <h2>Bem-vindo à Hamburgueria do Teko!</h2>
-        <p>Prepare-se para uma experiência gastronômica inesquecível. Nossos hambúrgueres são feitos com os melhores ingredientes, carnes selecionadas e um toque especial que só a Hamburgueria do Teko tem.</p>
-        <div class="destaques">
-            <div class="destaque-item">
-                <img src="imagens/hamburguer1.jpg" alt="Hambúrguer Clássico">
-                <h3>Clássico Teko</h3>
-                <p>Pão brioche, carne suculenta, queijo cheddar, alface, tomate e maionese especial.</p>
+    <section id="inicio" class="section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Bem-vindo à Hamburgueria do Teko!</h2>
+            <p class="lead text-center mb-4">Prepare-se para uma experiência inesquecível. Nossos hambúrgueres são
+                artesanais,
+                feitos com os melhores ingredientes.</p>
+            <marquee>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imagens/cheddarduplo.png" class="card-img-top" alt="Hambúrguer Duplo Cheddar">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Duplo Cheddar</h3>
+                            <!-- <p class="card-text">Pão De Brioche, 2 Hambuguer Bovino 180g, Mussarela, Bacon E Cheddar.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imagens/xbacon.png" class="card-img-top" alt="Hambúrguer X-Bacon">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">X-Bacon</h3>
+                            <!-- <p class="card-text">Pão De Brioche, Hamburguer Bovino 180g, Mussarela, Tomate, Alface,
+                                Cebola Roxa E Bacon.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" >
+                        <img src="imagens/smashduplo.png" class="card-img-top" alt="Hambúrguer Smash">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Smash Cheddar Duas Camadas</h3>
+                            <!-- <p class="card-text">Imagine dois hambúrguer no estilo smash, com 100g de carne cada até
+                                alcançar aquela crosta dourada irresistível.
+                                Por cima, uma generosa camada de cheddar cremoso, derretido perfeitamente para envolver
+                                cada pedaço.
+                                Para completar, fatias crocantes de bacon, que trazem um toque defumado e uma textura
+                                incrível ao lanche.
+                                Tudo isso, harmonizado dentro de um pão macio e levemente tostado,
+                                criando uma combinação perfeita de sabores e texturas que fazem cada mordida
+                                inesquecível.</p> -->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="destaque-item">
-                <img src="imagens/hamburguer2.jpg" alt="Hambúrguer Gourmet">
-                <h3>Teko Gourmet</h3>
-                <p>Pão australiano, blend de carnes nobres, queijo gorgonzola, rúcula e cebola caramelizada.</p>
-            </div>
-            <div class="destaque-item">
-                <img src="imagens/hamburguer3.jpg" alt="Hambúrguer Vegano">
-                <h3>Teko Veggie</h3>
-                <p>Pão integral, hambúrguer de grão de bico, queijo vegano, abobrinha grelhada e molho de pimentão.</p>
+        </div>
+    </marquee>
+    </section>
+
+    <section id="cardapio" class="section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Algumas de nossas delícias </h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imagens/xburguer.png" class="card-img-top" alt="X-Burguer">
+                        <div class="card-body">
+                            <h3 class="card-title">X-Burguer</h3>
+                            <p class="card-text descricao">Pão brioche, carne, queijo cheddar, alface, tomate, maionese.
+                            </p>
+                            <p class="card-text preco"><strong>R$ 25,00</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imagens/xegg.png" class="card-img-top" alt="X-Egg">
+                        <div class="card-body">
+                            <h3 class="card-title">X-Egg</h3>
+                            <p class="card-text descricao">Pão De Brioche, Hamburguer Bovino 180g, Mussarela, Tomate, Alface, Cebola Roxa E Ovo.</p>
+                            <p class="card-text preco"><strong>R$ 33,00</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imagens/xsalada.png" class="card-img-top" alt="X-Salada">
+                        <div class="card-body">
+                            <h3 class="card-title">X-Salada</h3>
+                            <p class="card-text descricao">Pão De Brioche, Hamburguer Bovino 180g, Mussarela, Tomate, Alface, Cebola Roxa.</p>
+                            <p class="card-text preco"><strong>R$ 29,90</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imagens/xcalabresa.png" class="card-img-top" alt="X-Calabresa">
+                        <div class="card-body">
+                            <h3 class="card-title">X-Calabresa</h3>
+                            <p class="card-text descricao">PPão De Brioche, Hamburguer Bovino 180g, Mussarela, Tomate, Alface, Cebola Roxa E Calabresa.</p>
+                            <p class="card-text preco"><strong>R$ 29,90</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imagens/combo1lanche.png" class="card-img-top" alt="Combo Lanche1">
+                        <div class="card-body">
+                            <h3 class="card-title">Dois X-Burguer's + Coca-Cola 1L</h3>
+                            <p class="card-text descricao">Dois deliciosos X-burguers, recheados com ingredientes frescos e irresistíveis,
+                            acompanhados por uma Coca-Cola geladinha de 1 litro. Perfeito para matar a fome e a sede com muito sabor!</p>
+                            <p class="card-text preco"><strong>R$ 19,90</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imagens/combolanche.png" class="card-img-top" alt="Combo Lanche">
+                        <div class="card-body">
+                            <h3 class="card-title">X-Bacon + X-Salada + Coca-Cola 1L</h3>
+                            <p class="card-text descricao">Um suculento X-Bacon, com seu toque defumado e irresistível, 
+                                acompanhado por um clássico X-Salada fresquinho e uma Coca-Cola bem gelada de 1 litro para completar a experiência. 
+                                    A combinação perfeita para quem ama variedade e sabor!</p>
+                            <p class="card-text preco"><strong>R$ 73,00</strong></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="cardapio" class="section cardapio-section">
-        <h2>Nosso Cardápio Delicioso</h2>
-        <div class="cardapio-lista">
-            <div class="cardapio-item">
-                <img src="imagens/cardapio1.jpg" alt="Hambúrguer Clássico">
-                <h3>Clássico Teko</h3>
-                <p class="descricao">Pão brioche, carne, queijo cheddar, alface, tomate, maionese.</p>
-                <p class="preco">R$ 25,90</p>
-            </div>
-            <div class="cardapio-item">
-                <img src="imagens/cardapio2.jpg" alt="Hambúrguer Bacon">
-                <h3>Teko Bacon</h3>
-                <p class="descricao">Pão brioche, carne, queijo cheddar, bacon crocante, cebola roxa, molho barbecue.</p>
-                <p class="preco">R$ 29,90</p>
-            </div>
-            <div class="cardapio-item">
-                <img src="imagens/cardapio3.jpg" alt="Hambúrguer Frango">
-                <h3>Teko Chicken</h3>
-                <p class="descricao">Pão brioche, peito de frango grelhado, queijo muçarela, alface, tomate, molho especial.</p>
-                <p class="preco">R$ 27,50</p>
-            </div>
-            <div class="cardapio-item">
-                <img src="imagens/cardapio4.jpg" alt="Hambúrguer Vegano">
-                <h3>Teko Veggie</h3>
-                <p class="descricao">Pão integral, hambúrguer de grão de bico, queijo vegano, abobrinha, molho pimentão.</p>
-                <p class="preco">R$ 31,00</p>
-            </div>
-            <div class="cardapio-item">
-                <img src="imagens/cardapio5.jpg" alt="Porção de Fritas">
-                <h3>Fritas Teko</h3>
-                <p class="descricao">Porção generosa de batatas fritas crocantes.</p>
-                <p class="preco">R$ 15,00</p>
-            </div>
-            <div class="cardapio-item">
-                <img src="imagens/cardapio6.jpg" alt="Milkshake de Chocolate">
-                <h3>Milkshake Teko Choc</h3>
-                <p class="descricao">Delicioso milkshake de chocolate com chantilly.</p>
-                <p class="preco">R$ 18,00</p>
-            </div>
-            </div>
-    </section>
+    <section id="contato" class="section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Entre em Contato Conosco</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-4">
+                    <p><i class="fas fa-map-marker-alt"></i> Rua São Paulo, 856 - Centro, Campo Mourão - PR</p>
+                    <p><i class="fas fa-map-marker-alt"></i> CNPJ: 59.923.645/0001-49</p>
+                    <p><i class="fas fa-envelope"></i> contato@hamburgueriadoteko.com.br</p>
+                    <p><i class="fas fa-map-marker-alt"></i><h3>Horário de Funcionamento</h3> 
+                        Segunda-feira -
+                        Não abre<br>
+                        Terça-feira -
+                        19:20 às 23:45<br>
+                        Quarta-feira -
+                        19:30 às 23:45<br>
+                        Quinta-feira -
+                        19:20 às 23:59<br>
+                        Sexta-feira -
+                        19:20 às 23:50<br>
+                        Sábado - 
+                        19:30 às 23:59<br>
+                        Domingo - 
+                        19:40 às 23:00</p>
 
-    <section id="sobre" class="section sobre-section">
-        <h2>Sobre a Hamburgueria do Teko</h2>
-        <div class="sobre-content">
-            <div class="sobre-imagem">
-                <img src="imagens/sobre.jpg" alt="Interior da Hamburgueria">
-            </div>
-            <div class="sobre-texto">
-                <p>A Hamburgueria do Teko nasceu da paixão por hambúrgueres de qualidade e do desejo de oferecer uma experiência única aos nossos clientes.</p>
-                <p>Desde a escolha dos ingredientes frescos até o preparo artesanal de cada hambúrguer, tudo é feito com o maior cuidado para garantir o melhor sabor.</p>
-                <p>Nosso ambiente é acolhedor e perfeito para reunir amigos e familiares. Venha nos visitar e descubra o verdadeiro sabor do hambúrguer!</p>
+
+                </div>
+                <div class="col-md-8">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Seu Nome">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Seu Email">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" placeholder="Sua Mensagem" rows="4"></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="section contato-section">
-        <h2>Entre em Contato Conosco</h2>
-        <div class="contato-info">
-            <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Centro, Campo Mourão - PR</p>
-            <p><i class="fas fa-phone"></i> (44) 99999-8888</p>
-            <p><i class="fas fa-envelope"></i> contato@hamburgueriadoteko.com.br</p>
+    <footer class="bg-danger text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 Hamburgueria do Teko - Todos os direitos reservados.</p>
         </div>
-        <form class="contato-form">
-            <input type="text" placeholder="Seu Nome">
-            <input type="email" placeholder="Seu Email">
-            <textarea placeholder="Sua Mensagem"></textarea>
-            <button type="submit" class="button">Enviar Mensagem</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Hamburgueria do Teko - Todos os direitos reservados.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
