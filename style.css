@@ -1,9 +1,36 @@
 /* Remover margens e paddings padrão do body */
 body {
+    background-image: url(imagens/fotosite1.png);
     margin: 0;
     padding: 0;
     font-family: sans-serif; /*Alterar fonte depois*/
 }
+
+.navbar {
+ background-image: url('imagens/foto_banner1.png'); /* Caminho para sua imagem */
+ background-size: cover; /* Para cobrir todo o espaço do navbar */
+ background-repeat: no-repeat; /* Para não repetir a imagem */
+ color: rgb(211, 30, 30) !important; /* Garante que o texto principal seja branco para contraste */
+ /* Outros estilos que você já tem ou queira adicionar */
+}
+
+/* Opcional: Ajustar a cor dos links da navegação para melhor contraste */
+.navbar .nav-link {
+ color: rgb(0, 0, 0) !important;
+}
+
+
+/* Opcional: Se a imagem for escura, você pode precisar ajustar a cor do ícone do toggler
+.navbar-toggler-icon {
+ background-color: white; /* Ou outra cor que contraste 
+}
+
+/* Se você tiver um fundo escuro no .bg-danger, pode querer remover ou ajustar isso */
+.bg-danger {
+ background-color: transparent !important; /* Tornar o fundo vermelho transparente */
+}
+*/
+
 
 /* Seção Hero */
 .hero {
@@ -16,16 +43,7 @@ body {
     /* posicionado no bootstrap */
 }
 
-/* Botão padrão */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    background-color: #dc3545; /*Cor vermelha do Bootstrap*/
-    border-radius: 5px;
-    margin-top: 20px;
-}
+
 
 .button:hover {
     background-color: #c82333;
