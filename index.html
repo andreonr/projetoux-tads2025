@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap"
         rel="stylesheet">
 
@@ -17,8 +18,8 @@
 </head>
 
 <body>
-    <header class="bg-danger text-white py-3">
-        <nav class="navbar navbar-expand-lg navbar-danger container">
+    <header class="bg-danger text-white py-lg-5 position-fixed w-100">
+        <nav class="navbar navbar-expand-lg navbar-light container">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="imagens/foto_banner1.png" alt="Hamburgueria do Teko" class="me-2" height="30">
                 <h1 class="fs-4 mb-0">Hamburgueria do Teko</h1>
@@ -39,7 +40,9 @@
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pedido">Peça Já</a>
+                        <button type="button" class="btn btn-danger btn-lg btn-outline-danger">
+                            <a class="nav-link" href="pedido"><strong>Peça aqui!</strong></a></button>
+                        <!-- <a class="nav-link" href="pedido">Peça Já</a> -->
                     </li>
                 </ul>
             </div>
@@ -48,68 +51,59 @@
             <!-- <img src="imagens/foto_banner2.png" alt="Banner Hamburgueria" class="img-fluid w-80"> -->
             <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
                 <p class="lead">Qualidade e sabor você só encontra aqui.</p>
-                <a href="#cardapio" class="btn btn-primary btn-warning">Ver Cardápio</a>
+                <a href="#cardapio" class="btn btn-primary btn-warning btn-lg icon-link-hover">Ver Cardápio</a>
+                <a href="#ifood"
+                    class="btn btn-danger btn-outline-danger btn-lg icon-link-hover text-light-emphasis">ifood</a>
+
             </div>
         </div>
     </header>
 
-    <section id="inicio" class="section py-5 bg-light">
+    <section id="inicio" class="section py-5 bg-danger">
         <div class="container">
             <!-- <img src="imagens/fotosite1.png" alt="Plano de Fundo">Plano de fundo do site</img>  -->
-            <h2 class="text-center mb-4">Bem-vindo à Hamburgueria do Teko!</h2>
-            <p class="lead text-center mb-4">Prepare-se para uma experiência inesquecível. Nossos hambúrgueres são
-                artesanais,
-                feitos com os melhores ingredientes.</p>
-            <marquee>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="imagens/cheddarduplo.png" class="card-img-top" alt="Hambúrguer Duplo Cheddar">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">Duplo Cheddar</h3>
-                                <!-- <p class="card-text">Pão De Brioche, 2 Hambuguer Bovino 180g, Mussarela, Bacon E Cheddar.
-                            </p> -->
+            <!-- <div class="marquee">
+                <div class="marquee-content">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="imagens/cheddarduplo.png" class="card-img-top" alt="Hambúrguer Duplo Cheddar">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">Duplo Cheddar</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="imagens/xbacon.png" class="card-img-top" alt="Hambúrguer X-Bacon">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">X-Bacon</h3>
-                                <!-- <p class="card-text">Pão De Brioche, Hamburguer Bovino 180g, Mussarela, Tomate, Alface,
-                                Cebola Roxa E Bacon.</p> -->
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="imagens/xbacon.png" class="card-img-top" alt="Hambúrguer X-Bacon">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">X-Bacon</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="imagens/smashduplo.png" class="card-img-top" alt="Hambúrguer Smash">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">Smash Cheddar Duas Camadas</h3>
-                                <!-- <p class="card-text">Imagine dois hambúrguer no estilo smash, com 100g de carne cada até
-                                alcançar aquela crosta dourada irresistível.
-                                Por cima, uma generosa camada de cheddar cremoso, derretido perfeitamente para envolver
-                                cada pedaço.
-                                Para completar, fatias crocantes de bacon, que trazem um toque defumado e uma textura
-                                incrível ao lanche.
-                                Tudo isso, harmonizado dentro de um pão macio e levemente tostado,
-                                criando uma combinação perfeita de sabores e texturas que fazem cada mordida
-                                inesquecível.</p> -->
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="imagens/smashduplo.png" class="card-img-top" alt="Hambúrguer Smash">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">Smash Cheddar Duas Camadas</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div> -->
         </div>
-        </marquee>
     </section>
 
-    <section id="cardapio" class="section py-5">
+    <id="cardapio" class="section py-5 bg-body">
         <div class="container">
-            <h2 class="bg-body text-center mb-4">Algumas de nossas delícias </h2>
+            <p class="lead text-center mb-4 bg-warning">Prepare-se para uma experiência inesquecível. Nossos hambúrgueres são
+                artesanais,
+                feitos com os melhores ingredientes.</p>
+            <h2 class="text-center mb-4"> Nossas Delícias </h2>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card h-100 bg-warning">
                         <img src="imagens/xburguer.png" class="card-img-top" alt="X-Burguer">
                         <div class="card-body">
                             <h3 class="card-title">X-Burguer</h3>
@@ -120,7 +114,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card h-100 bg-warning">
                         <img src="imagens/xegg.png" class="card-img-top" alt="X-Egg">
                         <div class="card-body">
                             <h3 class="card-title">X-Egg</h3>
@@ -131,7 +125,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card h-100 bg-warning">
                         <img src="imagens/xsalada.png" class="card-img-top" alt="X-Salada">
                         <div class="card-body">
                             <h3 class="card-title">X-Salada</h3>
@@ -142,7 +136,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card h-100 bg-warning">
                         <img src="imagens/xcalabresa.png" class="card-img-top" alt="X-Calabresa">
                         <div class="card-body">
                             <h3 class="card-title">X-Calabresa</h3>
@@ -153,20 +147,55 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="imagens/combo1lanche.png" class="card-img-top" alt="Combo Lanche1">
-                        <div class="card-body">
-                            <h3 class="card-title">Dois X-Burguer's + Coca-Cola 1L</h3>
-                            <p class="card-text descricao">Dois deliciosos X-burguers, recheados com ingredientes
-                                frescos e irresistíveis,
-                                acompanhados por uma Coca-Cola geladinha de 1 litro. Perfeito para matar a fome e a sede
-                                com muito sabor!</p>
-                            <p class="card-text preco"><strong>R$ 19,90</strong></p>
+                    <div class="card h-100 bg-warning   ">
+                        <img src="imagens/cheddarduplo.png" class="card-img-top" alt="Hambúrguer Duplo Cheddar">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Duplo Cheddar</h3>
+                            <p class="card-text">Pão De Brioche, 2 Hambuguer Bovino 180g, Mussarela, Bacon E Cheddar.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card h-100 bg-warning">
+                        <img src="imagens/xbacon.png" class="card-img-top" alt="Hambúrguer X-Bacon">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">X-Bacon</h3>
+                            <p class="card-text">Pão De Brioche, Hamburguer Bovino 180g, Mussarela, Tomate, Alface,
+                                Cebola Roxa E Bacon.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-warning">
+                        <img src="imagens/smashduplo.png" class="card-img-top" alt="Hambúrguer Smash">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Smash Cheddar Duas Camadas</h3>
+                            <p class="card-text">Imagine dois hambúrguer no estilo smash, com 100g de carne cada até
+                                alcançar aquela crosta dourada irresistível.
+                                Por cima, uma generosa camada de cheddar cremoso, derretido perfeitamente para envolver
+                                cada pedaço.
+                                Para completar, fatias crocantes de bacon, que trazem um toque defumado e uma textura
+                                incrível ao lanche.
+                                Tudo isso, harmonizado dentro de um pão macio e levemente tostado,
+                                criando uma combinação perfeita de sabores e texturas que fazem cada mordida
+                                inesquecível.</p>
+                        </div>
+                    </div>
+                </div <div class="col">
+                <div class="card h-100">
+                    <img src="imagens/combo1lanche.png" class="card-img-top" alt="Combo Lanche1">
+                    <div class="card-body bg-warning">
+                        <h3 class="card-title">Dois X-Burguer's + Coca-Cola 1L</h3>
+                        <p class="card-text descricao">Dois deliciosos X-burguers, recheados com ingredientes
+                            frescos e irresistíveis,
+                            acompanhados por uma Coca-Cola geladinha de 1 litro. Perfeito para matar a fome e a sede
+                            com muito sabor!</p>
+                        <p class="card-text preco"><strong>R$ 19,90</strong></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-warning">
                         <img src="imagens/combolanche.png" class="card-img-top" alt="Combo Lanche">
                         <div class="card-body">
                             <h3 class="card-title">X-Bacon + X-Salada + Coca-Cola 1L</h3>
@@ -180,108 +209,98 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+        </section>
 
-    <section id="contato" class="section py-5">
-        <div class="container">
-            <!-- <h2 class="fs-2 fw-bold shadow-lg text-center mb-4">Entre em Contato Conosco</h2> -->
-            <div class="row justify-content-center">
-                <div class="container-fluid red-background text-white py-5">
-                    <div class="text-center mb-4">
-                        <h1 class="display-4">Peça já essa Delícia!</h1>
+        <section id="contato" class="section py-5">
+            <div class="container">
+                <!-- <h2 class="fs-2 fw-bold shadow-lg text-center mb-4">Entre em Contato Conosco</h2> -->
+                <div class="row justify-content-center">
+                    <div class="container-fluid red-background text-white py-5">
+                        <div class="text-center mb-4">
+                            <h1 class="display-4">Peça já essa Delícia!</h1>
+                        </div>
+
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-4">
+                                <i class="fas fa-map-marker-alt icon-large mb-2"></i>
+                                <h3>Localização</h3>
+                                <p>Rua São Paulo, 856</p>
+                                <p>Campo Mourão - PR</p>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <i class="fas fa-clock icon-large mb-2"></i>
+                                <h3>Horário de Atendimento</h3>
+                                <p>Terça-Domingo: 19:30 - 23:45</p>
+                                <p>Delivery até 23:30</p>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <i class="fas fa-phone-alt icon-large mb-2"></i>
+                                <h3>Contato</h3>
+                                <p>(44) 99999-9999</p>
+                                <p>contato@hamburgueriadoteko.com.br</p>
+                            </div>
+                        </div>
+
+                        <iframe src="https://www.google.com/maps?q=Rua+São+Paulo,+856,+Campo+Mourão+-+PR&output=embed"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
                     </div>
 
-                    <div class="row text-center">
-                        <div class="col-md-4 mb-4">
-                            <i class="fas fa-map-marker-alt icon-large mb-2"></i>
-                            <h3>Location</h3>
-                            <p>Rua São Paulo, 856</p>
-                            <p>Campo Mourão - PR</p>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <i class="fas fa-clock icon-large mb-2"></i>
-                            <h3>Horário de Atendimento</h3>
-                            <p>Terça-Domingo: 19:30 - 23:45</p>
-                            <p>Delivery até 23:30</p>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <i class="fas fa-phone-alt icon-large mb-2"></i>
-                            <h3>Contato</h3>
-                            <p>(44) 99999-9999</p>
-                            <p>contato@hamburgueriadoteko.com.br</p>
+                    <div class="container d-flex justify-content-center align-items-center container-fluid bg-warning-subtle text-white py-lg-1 "
+                        style="min-height: 50vh;">
+                        <div class="col-md-8">
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Seu Nome">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Seu Email">
+                                </div>
+
+                                <!-- Novos campos -->
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Telefone">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Assunto">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Cidade">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Estado">
+                                </div>
+
+                                <div class="col-12">
+                                    <textarea class="form-control" placeholder="Sua Mensagem" rows="4"></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-warning">Enviar Mensagem</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-
-                    <!-- <div class="text-center mt-5">
-                        <p class="lead">
-                            (Campo Mourão, Brazil):
-                            <?php echo date("F j, Y, g:i a T"); ?>
-                        </p>
-                    </div> -->
-                    <iframe src="https://www.google.com/maps?q=Rua+São+Paulo,+856,+Campo+Mourão+-+PR&output=embed"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
 
                 </div>
-
-                <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-                    <div class="col-md-8">
-                        <form class="row g-3">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Seu Nome">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Seu Email">
-                            </div>
-
-                            <!-- Novos campos -->
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Telefone">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Assunto">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Empresa">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Cargo">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Cidade">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Estado">
-                            </div>
-
-                            <div class="col-12">
-                                <textarea class="form-control" placeholder="Sua Mensagem" rows="4"></textarea>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-warning">Enviar Mensagem</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="bg-warning-subtle text-body text-center py-3">
-        <div class="container">
-            <p>&copy; 2025 Hamburgueria do Teko - Todos os direitos reservados.</p>
-            <a href="https://www.instagram.com/hamburgueriadoteko" target="_blank" class="text-body mx-2">
-                <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
-            </a>
-        </div>
-    </footer>
+        <footer class="bg-warning-subtle text-body text-center py-3">
+            <div class="container">
+                <p>&copy; 2025 Hamburgueria do Teko - Todos os direitos reservados.</p>
+                <a href="https://www.instagram.com/hamburgueriadoteko" target="_blank" class="text-body mx-2">
+                    <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+                </a>
+            </div>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -25,7 +25,35 @@ body {
  background-color: transparent !important; /* Tornar o fundo vermelho transparente */
 }
 
+/* .marquee {
+  overflow:scroll;
+  white-space: nowrap;
+  width: 300px;
+  height: 30px;
+}
+*/
 
+
+/* .marquee-content {
+  display: inline-block;
+  animation: marquee 5s linear infinite; /* Ajuste a velocidade e o tempo de animação 
+} */
+
+
+/* .marquee-text {
+  white-space: nowrap;
+  padding-right: 20px; /* Adicionar espaço no final para o texto continuar rolando ----
+}  */
+
+/* @keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} 
+*/
 
 /* Seção Hero */
 .hero {
