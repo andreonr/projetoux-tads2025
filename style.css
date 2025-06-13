@@ -3,7 +3,7 @@ body {
     background-image: url(imagens/fotosite1.png);
     margin: 0;
     padding: 0;
-    font-family: sans-serif; /*Alterar fonte depois*/
+    font-family: 'Edu NSW ACT Cursive', cursive;
 }
 
 .navbar {
@@ -129,6 +129,26 @@ body {
 
 .contato-info i {
     margin-right: 5px;
+}
+
+.red-background {
+    background-color: #ff0000; /* Red color */
+    border-radius: 15px; /* Rounded corners */
+    margin: 20px; /* Margin around the red box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.icon-large {
+    font-size: 3rem; /* Adjust icon size */
+    color: white; /* Icon color */
+}
+
+/* Ensure text within the red background is white */
+.red-background h1,
+.red-background h3,
+.red-background p,
+.red-background .lead {
+    color: white;
 }
 
 .contato-form {
