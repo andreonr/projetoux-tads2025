@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Edu NSW ACT Cursive', cursive;
+    border-radius: 10px 0 10px 0;
 }
 
 .navbar {
@@ -11,7 +12,7 @@ body {
  background-size: cover; /* Para cobrir todo o espaço do navbar */
  background-repeat: no-repeat; /* Para não repetir a imagem */
  color: rgb(211, 30, 30) !important; /* Garante que o texto principal seja branco para contraste */
- /* Outros estilos que você já tem ou queira adicionar */
+ border-radius: 10px;
 }
 
 /* Opcional: Ajustar a cor dos links da navegação para melhor contraste */
@@ -20,16 +21,10 @@ body {
 }
 
 
-/* Opcional: Se a imagem for escura, você pode precisar ajustar a cor do ícone do toggler
-.navbar-toggler-icon {
- background-color: white; /* Ou outra cor que contraste 
-}
-
-/* Se você tiver um fundo escuro no .bg-danger, pode querer remover ou ajustar isso */
 .bg-danger {
  background-color: transparent !important; /* Tornar o fundo vermelho transparente */
 }
-*/
+
 
 
 /* Seção Hero */
