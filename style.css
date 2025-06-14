@@ -8,7 +8,8 @@ body {
 }
 
 .navbar {
- background-image: url('imagens/foto_banner1.png'); /* Caminho para sua imagem */
+ /* Caminho para sua imagem */
+ background-image: url('imagens/foto_banner1.png');
  background-size: cover; /* Para cobrir todo o espaço do navbar */
  background-repeat: no-repeat; /* Para não repetir a imagem */
  color: rgb(211, 30, 30) !important; /* Garante que o texto principal seja branco para contraste */
@@ -25,35 +26,6 @@ body {
  background-color: transparent !important; /* Tornar o fundo vermelho transparente */
 }
 
-/* .marquee {
-  overflow:scroll;
-  white-space: nowrap;
-  width: 300px;
-  height: 30px;
-}
-*/
-
-
-/* .marquee-content {
-  display: inline-block;
-  animation: marquee 5s linear infinite; /* Ajuste a velocidade e o tempo de animação 
-} */
-
-
-/* .marquee-text {
-  white-space: nowrap;
-  padding-right: 20px; /* Adicionar espaço no final para o texto continuar rolando ----
-}  */
-
-/* @keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} 
-*/
 
 /* Seção Hero */
 .hero {
@@ -186,3 +158,5 @@ body {
 .contato {
     /* background-color: #c82333; */
 }
+
+/* arrumar o footer na tela */
