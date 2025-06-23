@@ -44,7 +44,7 @@
                     <li class="nav-item">
                         <button type="button" class="btn btn-danger btn-lg btn-outline-danger">
                             <a class="nav-link" href="pedido"><strong>Peça aqui!</strong></a></button>
-                        </li>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -60,14 +60,15 @@
 
     <section id="inicio" class="section py-5 bg-danger">
         <div class="container">
-            </div>
+        </div>
     </section>
 
 
     <section id="contato" class="section py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="container-fluid red-background text-white py-5" id="ifood"> <div class="text-center mb-4">
+                <div class="container-fluid red-background text-white py-5" id="ifood">
+                    <div class="text-center mb-4">
                         <h1 class="display-4">Peça já essa Delícia!</h1>
                     </div>
 
@@ -99,32 +100,46 @@
 
                 </div>
 
-                <div class="container d-flex justify-content-center align-items-center container-fluid bg-warning-subtle text-white py-lg-1 "
+                <div class="container d-flex justify-content-center align-items-center container-fluid bg-warning-subtle text-white py-lg-1"
                     style="min-height: 50vh;">
                     <div class="col-md-8">
-                        <form class="row g-3">
+                        <form class="row g-3" action="#" method="POST">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Seu Nome">
+                                <label for="userName" class="form-label visually-hidden">Seu Nome</label>
+                                <input type="text" class="form-control" id="userName" name="userName"
+                                    placeholder="Seu Nome Completo" required autocomplete="name">
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Seu Email">
+                                <label for="userEmail" class="form-label visually-hidden">Seu Email</label>
+                                <input type="email" class="form-control" id="userEmail" name="userEmail"
+                                    placeholder="seu.email@exemplo.com" required autocomplete="email">
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Telefone">
+                                <label for="userPhone" class="form-label visually-hidden">Telefone</label>
+                                <input type="tel" class="form-control" id="userPhone" name="userPhone"
+                                    placeholder="(XX) XXXXX-XXXX (Telefone)" autocomplete="tel">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Assunto">
+                                <label for="subject" class="form-label visually-hidden">Assunto</label>
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                    placeholder="Assunto da Mensagem" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Cidade">
+                                <label for="userCity" class="form-label visually-hidden">Cidade</label>
+                                <input type="text" class="form-control" id="userCity" name="userCity"
+                                    placeholder="Sua Cidade" autocomplete="address-level2">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Estado">
+                                <label for="userState" class="form-label visually-hidden">Estado</label>
+                                <input type="text" class="form-control" id="userState" name="userState"
+                                    placeholder="Seu Estado (Ex: PR )" autocomplete="address-level1">
                             </div>
 
                             <div class="col-12">
-                                <textarea class="form-control" placeholder="Sua Mensagem" rows="4"></textarea>
+                                <label for="userMessage" class="form-label visually-hidden">Sua Mensagem</label>
+                                <textarea class="form-control" id="userMessage" name="userMessage"
+                                    placeholder="Digite sua mensagem aqui..." rows="4" required></textarea>
                             </div>
                             <div class="col-12 text-center">
                                 <button type="submit" class="btn btn-warning">Enviar Mensagem</button>
@@ -132,10 +147,108 @@
                         </form>
                     </div>
                 </div>
-
-            </div>
-        </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-masker@1.2.0/lib/vanilla-masker.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            const userNameInput = document.getElementById('userName');
+            const userEmailInput = document.getElementById('userEmail');
+            const userPhoneInput = document.getElementById('userPhone');
+            const subjectInput = document.getElementById('subject');
+            const userCityInput = document.getElementById('userCity');
+            const userStateInput = document.getElementById('userState');
+            const userMessageInput = document.getElementById('userMessage');
+
+            VMasker(userPhoneInput).maskPattern("(99) 99999-9999");
+
+            userStateInput.addEventListener('input', function (e) {
+                let value = e.target.value.toUpperCase();
+                if (value.length > 2) {
+                    value = value.substring(0, 2);
+                }
+                e.target.value = value.replace(/[^A-Z]/g, ''); // Allow only letters
+            });
+
+            userNameInput.addEventListener('blur', () => validateField(userNameInput, validateName));
+            userEmailInput.addEventListener('blur', () => validateField(userEmailInput, validateEmail));
+            userPhoneInput.addEventListener('blur', () => validateField(userPhoneInput, validatePhone));
+            subjectInput.addEventListener('blur', () => validateField(subjectInput, validateSubject));
+            userCityInput.addEventListener('blur', () => validateField(userCityInput, validateCity));
+            userStateInput.addEventListener('blur', () => validateField(userStateInput, validateState));
+            userMessageInput.addEventListener('blur', () => validateField(userMessageInput, validateMessage));
+
+            // --- Envio do form ---
+            form.addEventListener('submit', function (event) {
+                let formIsValid = true;
+
+                // Validar ou preencher os campos para assim enviar
+                formIsValid = validateField(userNameInput, validateName) && formIsValid;
+                formIsValid = validateField(userEmailInput, validateEmail) && formIsValid;
+                formIsValid = validateField(userPhoneInput, validatePhone) && formIsValid;
+                formIsValid = validateField(subjectInput, validateSubject) && formIsValid;
+                formIsValid = validateField(userCityInput, validateCity) && formIsValid;
+                formIsValid = validateField(userStateInput, validateState) && formIsValid;
+                formIsValid = validateField(userMessageInput, validateMessage) && formIsValid;
+
+                if (!formIsValid) {
+                    event.preventDefault(); // Prevent form submission if validation fails
+                    alert('Por favor, corrija os campos destacados.');
+                }
+            });
+
+            // --- Funções da validação ---
+
+            function validateField(inputElement, validatorFunction) {
+                const isValid = validatorFunction(inputElement.value);
+                if (isValid) {
+                    inputElement.classList.remove('is-invalid');
+                    inputElement.classList.add('is-valid');
+                } else {
+                    inputElement.classList.remove('is-valid');
+                    inputElement.classList.add('is-invalid');
+                }
+                return isValid;
+            }
+
+            function validateName(name) {
+                // Name should not be empty and ideally have at least two words
+                return name.trim().length > 0 && name.trim().split(' ').length >= 2;
+            }
+
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+            function validatePhone(phone) {
+                // Phone can be optional but if filled, must match the mask pattern
+                // (XX) XXXXX-XXXX or (XX) XXXX-XXXX (for older numbers)
+                const cleanedPhone = phone.replace(/\D/g, '');
+                return phone.trim() === '' || cleanedPhone.length === 10 || cleanedPhone.length === 11;
+            }
+
+            function validateSubject(subject) {
+                return subject.trim().length > 0;
+            }
+
+            function validateCity(city) {
+                return city.trim().length > 0;
+            }
+
+            function validateState(state) {
+                // State should be 2 uppercase letters
+                const re = /^[A-Z]{2}$/;
+                return re.test(String(state).toUpperCase());
+            }
+
+            function validateMessage(message) {
+                return message.trim().length > 0;
+            }
+        });
+    </script>
 
     <footer class="bg-warning-subtle text-body text-center py-3">
         <div class="container">
@@ -147,4 +260,5 @@
     </footer>
 
 </body>
+
 </html>
