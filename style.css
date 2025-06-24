@@ -59,6 +59,10 @@ header {
 
     .hero-content .btn {
         margin: 5px; /* Adjust button spacing */
+        padding: 15px 40px; /* Aumenta o padding para botões maiores */
+        font-size: 1.5rem; /* Aumenta o tamanho da fonte */
+        margin: 10px; /* Adiciona margem entre os botões */
+        display: inline-block
     }
 }
 
@@ -88,12 +92,20 @@ header {
     position: relative;
     text-align: center;
     color: white;
-    padding-top: 100px; /* Adjust based on header height */
+    padding-top: 150px; /* Ajuste este valor conforme necessário para empurrar o conteúdo para baixo da navbar fixa */
     padding-bottom: 50px;
+    min-height: calc(100vh - 100px); /* Ajuste conforme a altura do seu header/footer */
+    display: flex; /* Adicione display flex */
+    align-items: center; /* Centraliza verticalmente o hero-content */
+    justify-content: center; /* Centraliza horizontalmente o hero-content */
 }
 
 .hero-content {
-    /* posicionado no bootstrap */
+    /* posicionado no bootstrap - Remova position: absolute; top: 50%; start: 50%; translate-middle; */
+    /* As propriedades flexbox do .hero já vão centralizar */
+    position: relative; /* Mude para relative para que os botões fiquem alinhados normalmente dentro do flow */
+    transform: none; /* Remova a transformação que era usada com absolute */
+    padding: 20px; /* Adicione um padding interno para o conteúdo */
 }
 
 
@@ -270,8 +282,24 @@ footer {
     .lead {
         font-size: 1rem !important;
     }
+
+    .hero-content .btn {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        display: block; /* Empilha os botões em telas menores */
+        margin: 10px auto; /* Centraliza os botões empilhados */
+    }
+
+    .hero {
+        padding-top: 100px; /* Ajuste para telas menores */
+    }   
 }
 
+#inicio {
+    margin-top: 90px; /* Ajuste este valor para a altura da sua navbar */
+    /* Adicione um padding-bottom se necessário para dar espaço entre o conteúdo e o footer */
+    padding-bottom: 50px;
+}
 
 .mural-logo {
     background-image: url('imagens/logohamburgueria.JPG');
