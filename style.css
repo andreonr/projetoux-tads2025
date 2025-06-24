@@ -271,3 +271,25 @@ footer {
         font-size: 1rem !important;
     }
 }
+
+
+.mural-logo {
+    background-image: url('imagens/logohamburgueria.JPG');
+    background-repeat: repeat; /* This is key for repeating the image */
+    background-size: 150px; /* Adjust size of each repeated logo as needed */
+    background-position: center center; /* Center the pattern */
+    min-height: 400px; /* Give it enough height to show the mural */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2; /* Make it subtle, like a watermark */
+    border-radius: 10px; /* Optional: adds a slight border radius */
+    margin: 20px 0; /* Add some margin above and below */
+}
+
+/* Optional: Adjust for smaller screens if the logo size is too big */
+@media (max-width: 768px) {
+    .mural-logo {
+        background-size: 100px; /* Smaller logos on smaller screens */
+    }
+}
