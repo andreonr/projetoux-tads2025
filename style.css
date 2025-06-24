@@ -2,36 +2,84 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Add box-sizing for consistent sizing */
 }
 
 body {
     background-image: url(imagens/fotosite1.png);
-    height: 100%;
+    background-size: cover; /* Ensure background covers the entire body */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fix the background image */
+    min-height: 100vh; /* Ensure body takes full viewport height */
     margin: 0;
     padding: 0;
     font-family: 'Edu NSW ACT Cursive', cursive;
     border-radius: 10px 0 10px 0;
 }
 
-.navbar {
- position: relative;
- /* background-image: url('imagens/foto_banner1.png'); */
- background-color: #f9f9f9;
- background-size: cover; /* cobrir todo o espaço do navbar */
- background-repeat: no-repeat; /* não repetir a imagem */
- color: rgb(211, 30, 30) !important; /* isso garante que o texto principal seja branco para contraste */
- border-radius: 10px;
+/* Header Adjustments */
+header {
+    z-index: 1030; /* Ensure header is above other content */
+    top: 0;
 }
 
-/* Opcional: Ajustar a cor dos links da navegação para melhor contraste */
+@media (max-width: 991.98px) { /* For Bootstrap's 'lg' breakpoint and below */
+    header {
+        position: relative !important; /* Make header relative on smaller screens */
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .navbar-brand img {
+        height: 25px; /* Adjust logo size for smaller screens */
+    }
+
+    .navbar-brand h1 {
+        font-size: 1.2rem !important; /* Adjust brand title size */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Push toggler to the right */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Center nav items in collapsed state */
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 5px;
+    }
+
+    .hero-content {
+        position: static !important; /* Remove absolute positioning for better flow */
+        transform: none !important; /* Remove transform */
+        padding: 20px 0; /* Add padding */
+    }
+
+    .hero-content .btn {
+        margin: 5px; /* Adjust button spacing */
+    }
+}
+
+
+.navbar {
+    position: relative;
+    background-color: #f9f9f9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(211, 30, 30) !important;
+    border-radius: 10px;
+}
+
 .navbar .nav-link {
- color: rgb(0, 0, 0) !important;
- font: bold;
+    color: rgb(0, 0, 0) !important;
+    font: bold;
 }
 
 
 .bg-danger {
- background-color: transparent !important; /* Tornar o fundo vermelho transparente */
+    background-color: transparent !important;
 }
 
 
@@ -40,6 +88,8 @@ body {
     position: relative;
     text-align: center;
     color: white;
+    padding-top: 100px; /* Adjust based on header height */
+    padding-bottom: 50px;
 }
 
 .hero-content {
@@ -62,7 +112,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
-    flex-wrap: wrap; /*para a responsividade*/
+    flex-wrap: wrap;
 }
 
 .destaque-item {
@@ -82,7 +132,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* Seção do Cardápio (revisar alguns estilos que já estão no código html com o bootstrap) */
+/* Seção do Cardápio */
 .cardapio-lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -117,7 +167,7 @@ body {
 
 .cardapio-item .preco {
     font-weight: bold;
-    color: #28a745; /* Verde Bootstrap */
+    color: #28a745;
 }
 
 /* Seção Contato */
@@ -135,16 +185,37 @@ body {
 }
 
 .red-background {
-    background-color: #ff0000; /* Red color */
-    border-radius: 15px; /* Rounded corners */
-    margin: 20px; /* Margin around the red box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ff0000;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Add padding for internal spacing */
 }
 
 .icon-large {
-    font-size: 3rem; /* Adjust icon size */
-    color: white; /* Icon color */
+    font-size: 3rem;
+    color: white;
 }
+
+/* Adjust icon size for smaller screens */
+@media (max-width: 767.98px) { /* For Bootstrap's 'md' breakpoint and below */
+    .icon-large {
+        font-size: 2rem; /* Smaller icons on mobile */
+    }
+
+    .red-background h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .red-background h3 {
+        font-size: 1.3rem; /* Adjust subheading size */
+    }
+
+    .red-background p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+}
+
 
 /* Ensure text within the red background is white */
 .red-background h1,
@@ -167,11 +238,36 @@ body {
     /* background-color: #c82333; */
 }
 
+/* Footer Adjustments */
 footer {
     padding: 15px;
     text-align: center;
-    position: fixed;
+    position: relative; /* Change to relative for normal document flow */
     bottom: 0;
     width: 100%;
-    box-sizing: border-box; /* isso é para o padding não aumentar a largura total */
+    box-sizing: border-box;
+    margin-top: 20px; /* Add some space above the footer */
+}
+
+/* Media query for smaller screens on footer */
+@media (max-width: 767.98px) {
+    footer {
+        position: relative; /* Ensure it stays relative on smaller screens */
+    }
+}
+
+/* General responsive text adjustments for smaller screens */
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    h2 {
+        font-size: 1.8rem !important;
+    }
+    h3 {
+        font-size: 1.5rem !important;
+    }
+    .lead {
+        font-size: 1rem !important;
+    }
 }
