@@ -10,7 +10,6 @@ body {
     background-size: cover; /* Ensure background covers the entire body */
     background-repeat: no-repeat;
     background-attachment: fixed; /* Fix the background image */
-    min-height: 100vh; /* Ensure body takes full viewport height */
     margin: 0;
     padding: 0;
     font-family: 'Edu NSW ACT Cursive', cursive;
