@@ -94,6 +94,9 @@
 
                 <div class="container d-flex justify-content-center align-items-center container-fluid bg-warning-subtle text-white py-lg-1"
                     style="min-height: 50vh;">
+                    <div class="text-center">
+                        <h2 class="display-4 text-dark">Entre em contato conosco!</h2>
+                    </div>
                     <div class="col-md-8">
                         <form class="row g-3" action="#" method="POST">
                             <div class="col-md-6">
@@ -226,7 +229,7 @@
             function validateField(inputElement, validatorFunction) {
                 const isValid = validatorFunction(inputElement.value);
                 // Get the next sibling which should be the invalid-feedback div
-                const feedbackElement = inputElement.nextElementSibling; 
+                const feedbackElement = inputElement.nextElementSibling;
 
                 if (isValid) {
                     inputElement.classList.remove('is-invalid');
