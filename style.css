@@ -1,48 +1,46 @@
-/* Remover margens e paddings padrão do body */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Add box-sizing for consistent sizing */
-}
+    box-sizing: border-box;
 
 body {
     background-image: url(imagens/fotosite1.png);
-    background-size: cover; /* Ensure background covers the entire body */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Fix the background image */
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     font-family: 'Edu NSW ACT Cursive', cursive;
     border-radius: 10px 0 10px 0;
 }
 
-/* Header Adjustments */
+
 header {
-    z-index: 1030; /* Ensure header is above other content */
+    z-index: 1030;
     top: 0;
 }
 
-@media (max-width: 991.98px) { /* For Bootstrap's 'lg' breakpoint and below */
+@media (max-width: 991.98px) {
     header {
-        position: relative !important; /* Make header relative on smaller screens */
+        position: relative !important;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
 
     .navbar-brand img {
-        height: 25px; /* Adjust logo size for smaller screens */
+        height: 25px;
     }
 
     .navbar-brand h1 {
-        font-size: 1.2rem !important; /* Adjust brand title size */
+        font-size: 1.2rem !important;
     }
 
     .navbar-toggler {
-        margin-left: auto; /* Push toggler to the right */
+        margin-left: auto;
     }
 
     .navbar-nav {
-        text-align: center; /* Center nav items in collapsed state */
+        text-align: center;
         margin-top: 10px;
     }
 
@@ -51,16 +49,16 @@ header {
     }
 
     .hero-content {
-        position: static !important; /* Remove absolute positioning for better flow */
-        transform: none !important; /* Remove transform */
-        padding: 20px 0; /* Add padding */
+        position: static !important;
+        transform: none !important;
+        padding: 20px 0;
     }
 
     .hero-content .btn {
-        margin: 5px; /* Adjust button spacing */
-        padding: 15px 40px; /* Aumenta o padding para botões maiores */
-        font-size: 1.5rem; /* Aumenta o tamanho da fonte */
-        margin: 10px; /* Adiciona margem entre os botões */
+        margin: 5px;
+        padding: 15px 40px;
+        font-size: 1.5rem;
+        margin: 10px;
         display: inline-block
     }
 }
@@ -91,20 +89,18 @@ header {
     position: relative;
     text-align: center;
     color: white;
-    padding-top: 150px; /* Ajuste este valor conforme necessário para empurrar o conteúdo para baixo da navbar fixa */
+    padding-top: 150px; /* se necessário empurrar o conteúdo para baixo da navbar fixa */
     padding-bottom: 50px;
-    min-height: calc(100vh - 100px); /* Ajuste conforme a altura do seu header/footer */
-    display: flex; /* Adicione display flex */
-    align-items: center; /* Centraliza verticalmente o hero-content */
-    justify-content: center; /* Centraliza horizontalmente o hero-content */
+    min-height: calc(100vh - 100px); /* conforme a altura do header/footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-content {
-    /* posicionado no bootstrap - Remova position: absolute; top: 50%; start: 50%; translate-middle; */
-    /* As propriedades flexbox do .hero já vão centralizar */
-    position: relative; /* Mude para relative para que os botões fiquem alinhados normalmente dentro do flow */
-    transform: none; /* Remova a transformação que era usada com absolute */
-    padding: 20px; /* Adicione um padding interno para o conteúdo */
+    position: relative;
+    transform: none;
+    padding: 20px;
 }
 
 
@@ -200,7 +196,7 @@ header {
     border-radius: 15px;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px; /* Add padding for internal spacing */
+    padding: 20px;
 }
 
 .icon-large {
@@ -208,27 +204,27 @@ header {
     color: white;
 }
 
-/* Adjust icon size for smaller screens */
-@media (max-width: 767.98px) { /* For Bootstrap's 'md' breakpoint and below */
+/* Ajuste dos ícones */
+@media (max-width: 767.98px) {
     .icon-large {
-        font-size: 2rem; /* Smaller icons on mobile */
+        font-size: 2rem;
     }
 
     .red-background h1 {
-        font-size: 2rem; /* Adjust heading size */
+        font-size: 2rem;
     }
 
     .red-background h3 {
-        font-size: 1.3rem; /* Adjust subheading size */
+        font-size: 1.3rem;
     }
 
     .red-background p {
-        font-size: 0.9rem; /* Adjust paragraph size */
+        font-size: 0.9rem;
     }
 }
 
 
-/* Ensure text within the red background is white */
+/* Não esquecer pois o texto fica branco no bg vermelho */
 .red-background h1,
 .red-background h3,
 .red-background p,
@@ -249,25 +245,25 @@ header {
     /* background-color: #c82333; */
 }
 
-/* Footer Adjustments */
+
 footer {
     padding: 15px;
     text-align: center;
-    position: relative; /* Change to relative for normal document flow */
+    position: relative;
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 20px; /* Add some space above the footer */
+    margin-top: 20px;
 }
 
-/* Media query for smaller screens on footer */
+/* Media query para o footer nas telas menores */
 @media (max-width: 767.98px) {
     footer {
-        position: relative; /* Ensure it stays relative on smaller screens */
+        position: relative;
     }
 }
 
-/* General responsive text adjustments for smaller screens */
+/* Ajustes gerrais de textos em páginas menores */
 @media (max-width: 767.98px) {
     h1 {
         font-size: 2rem !important;
@@ -285,38 +281,40 @@ footer {
     .hero-content .btn {
         padding: 10px 20px;
         font-size: 1.2rem;
-        display: block; /* Empilha os botões em telas menores */
-        margin: 10px auto; /* Centraliza os botões empilhados */
+        display: block;
+        margin: 10px auto;
     }
 
     .hero {
-        padding-top: 100px; /* Ajuste para telas menores */
+        padding-top: 100px;
     }   
 }
 
 #inicio {
-    margin-top: 90px; /* Ajuste este valor para a altura da sua navbar */
-    /* Adicione um padding-bottom se necessário para dar espaço entre o conteúdo e o footer */
+    margin-top: 90px; 
     padding-bottom: 50px;
 }
 
 .mural-logo {
     background-image: url('imagens/logohamburgueria.JPG');
-    background-repeat: repeat; /* This is key for repeating the image */
-    background-size: 150px; /* Adjust size of each repeated logo as needed */
-    background-position: center center; /* Center the pattern */
-    min-height: 400px; /* Give it enough height to show the mural */
+    background-repeat: repeat;
+    background-size: 150px;
+    background-position: center center;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.2; /* Make it subtle, like a watermark */
-    border-radius: 10px; /* Optional: adds a slight border radius */
-    margin: 20px 0; /* Add some margin above and below */
+    opacity: 0.2;
+    border-radius: 10px;
+    margin: 20px 0;
 }
 
-/* Optional: Adjust for smaller screens if the logo size is too big */
+/* opcional para ajustar em telas menores caso a logo esteja mto grande */
 @media (max-width: 768px) {
     .mural-logo {
-        background-size: 100px; /* Smaller logos on smaller screens */
+        background-size: 100px;
     }
+}
+
+
 }
